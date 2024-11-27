@@ -107,6 +107,13 @@ const LoginContainer = ({ history }: RouteComponentProps) => {
                             Forgot password?
                         </Link>
                     </div>
+                    <div className="mt-6">
+                        <a 
+                            href="/auth/discord"
+                        >
+                            Login with Discord
+                        </a>
+                    </div>
                 </LoginFormContainer>
             )}
         </Formik>

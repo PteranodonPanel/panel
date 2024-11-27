@@ -22,6 +22,9 @@ class EventServiceProvider extends ServiceProvider
      */
     protected $listen = [
         ServerInstalledEvent::class => [ServerInstalledNotification::class],
+        \SocialiteProviders\Manager\SocialiteWasCalled::class => [
+            \SocialiteProviders\Discord\DiscordExtendSocialite::class.'@handle',
+        ],
     ];
 
     protected $subscribe = [
